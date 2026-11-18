@@ -1,0 +1,104 @@
+{
+ "backend": "CPU: 2 thread(s), double precision",
+ "results": [
+  {
+   "name": "Grid transfer: prolong/restrict exact on shared modes",
+   "value": 6.661338147750939e-16,
+   "reference": 0.0,
+   "tolerance": 1e-11,
+   "passed": true,
+   "seconds": 0.01,
+   "note": "max error of prolongation at coincident points and of a round trip"
+  },
+  {
+   "name": "2-D Taylor-Green decay vs exact solution",
+   "value": 3.3306690738754696e-15,
+   "reference": 0.0,
+   "tolerance": 1e-10,
+   "passed": true,
+   "seconds": 0.04,
+   "note": "relative energy error at t = 2"
+  },
+  {
+   "name": "3-D ABC Beltrami decay vs exact solution",
+   "value": 6.8833827526759706e-15,
+   "reference": 0.0,
+   "tolerance": 1e-10,
+   "passed": true,
+   "seconds": 1.706,
+   "note": "relative energy error at t = 3"
+  },
+  {
+   "name": "3-D velocity stays divergence-free",
+   "value": 3.0299009384777586e-16,
+   "reference": 0.0,
+   "tolerance": 1e-10,
+   "passed": true,
+   "seconds": 0.343,
+   "note": "max |div u| after 2 time units of Taylor-Green flow"
+  },
+  {
+   "name": "Inviscid energy conservation (nonlinear term)",
+   "value": 7.632072751562191e-10,
+   "reference": 0.0,
+   "tolerance": 1e-07,
+   "passed": true,
+   "seconds": 0.531,
+   "note": "relative energy drift at nu = 0 over 1.5 time units"
+  },
+  {
+   "name": "Energy budget: -dE/dt = 2 nu Z",
+   "value": 4.377887780071532e-07,
+   "reference": 0.0,
+   "tolerance": 0.0001,
+   "passed": true,
+   "seconds": 3.273,
+   "note": "relative mismatch between energy decay rate and viscous dissipation"
+  },
+  {
+   "name": "Time integration is 4th order",
+   "value": 3.9848481207839725,
+   "reference": 4.0,
+   "tolerance": 0.4,
+   "passed": true,
+   "seconds": 0.434,
+   "note": "observed order from dt-halving against a fine-dt reference"
+  },
+  {
+   "name": "2-D and 3-D solvers agree on a z-invariant flow",
+   "value": 8.307260890330385e-16,
+   "reference": 0.0,
+   "tolerance": 1e-09,
+   "passed": true,
+   "seconds": 1.247,
+   "note": "relative max vorticity difference after shear-layer roll-up begins"
+  },
+  {
+   "name": "Rollback restores the checkpoint bit-for-bit and replays identically",
+   "value": 0.0,
+   "reference": 0.0,
+   "tolerance": 0.0,
+   "passed": true,
+   "seconds": 0.237,
+   "note": "state and time compared exactly after rewind and after re-running the interval"
+  },
+  {
+   "name": "Adaptive run reproduces the uniform fine-grid run",
+   "value": 0.002094099259405624,
+   "reference": 0.0,
+   "tolerance": 0.02,
+   "passed": true,
+   "seconds": 33.171,
+   "note": "enstrophy error at t = 6 vs uniform 64^3 (uniform 16^3 error 0.132); 2 promotion(s), 2 rollback(s), 1.39x fewer cell-steps, limiter fired 0 times"
+  },
+  {
+   "name": "Injected non-finite state is rolled back and the run completes",
+   "value": 0.0,
+   "reference": 0.0,
+   "tolerance": 0.0,
+   "passed": true,
+   "seconds": 0.305,
+   "note": "events: rollback_promote"
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+case,precision,verdict,note,arr_wall_s,arr_diss_err,vs_finest
+abc,double,TIE,1.00x vs uniform16 (cheapest uniform as accurate),0.5463801869999543,1.2067046436620508e-05,3.9746626409061117
+abc,single,TIE,1.00x vs uniform16 (cheapest uniform as accurate),0.5385398350000514,1.9734242155180996e-05,4.022943699234148
+shear2d,double,TRADE,"1.20x faster than uniform512, but uniform512 is 135x more accurate; ARR sits between grids",11.51073213899997,9.875400179620195e-05,2.395278937695385
+shear2d,single,WIN,1.21x vs uniform512 (cheapest uniform as accurate),11.546463211999935,0.00011474964393655376,2.421371514520887
+tgv1600,double,WIN,more accurate than every uniform grid (1.17x vs uniform128) and 1.15x faster than uniform128,8.232172366000043,0.07031518122472238,1.1454889213625514
+tgv1600,single,WIN,more accurate than every uniform grid (1.17x vs uniform128) and 1.09x faster than uniform128,4.563079995999999,0.0703263544351802,1.0900912978427684
+turb2d,double,LOSS,uniform256 is faster (1.21x) and 4.4x more accurate,22.347793619999948,0.007542707066046257,1.709221948014398
+turb2d,single,LOSS,uniform256 is faster (1.30x) and 4.0x more accurate,22.8098439769999,0.007025601390930082,1.698688950045868
+turb3d,double,WIN,1.19x vs uniform128 (cheapest uniform as accurate),11.820699490000038,0.004548181907253271,1.1939908172896043
+turb3d,single,WIN,1.15x vs uniform128 (cheapest uniform as accurate),6.398497557999917,0.004544640478472875,1.152287177132971

@@ -1,0 +1,11 @@
+case,precision,verdict,note,arr_wall_s,arr_diss_err,vs_finest
+abc,double,TIE,1.00x vs uniform32 (cheapest uniform as accurate),2.2577315969992924,1.9043233221987814e-07,7.335697696312762
+abc,single,TIE,1.00x vs uniform32 (cheapest uniform as accurate),2.246252549000019,5.3960413106136327e-05,3.9774714748690285
+shear2d,double,TIE,1.01x vs uniform512 (cheapest uniform as accurate),13.94389469700036,7.302605821563902e-07,11.286875781474192
+shear2d,single,TIE,1.01x vs uniform512 (cheapest uniform as accurate),14.091413983000166,9.230214528473758e-05,5.840374330516805
+tgv1600,double,WIN,more accurate than every uniform grid (1.64x vs uniform256) and 1.19x faster than uniform256,199.77511432200026,0.01857092766681233,1.189110691820734
+tgv1600,single,WIN,more accurate than every uniform grid (1.63x vs uniform256) and 1.18x faster than uniform256,103.95372668400023,0.018611257440706155,1.182991856904036
+turb2d,double,NOISY,"metric does not converge with resolution here (finer uniform grids are not more accurate), so it can't rank grids. ARR vs uniform1024: dissipation histories differ by 1.8e-05, ARR 1.48x faster",57.45064017100049,0.006415818078115618,1.4820435057045445
+turb2d,single,WIN,1.47x vs uniform1024 (cheapest uniform as accurate),57.75712766700053,0.0032813219077875194,1.4673099877925462
+turb3d,double,TIE,1.00x vs uniform256 (cheapest uniform as accurate),278.4310343829993,0.013909930794722558,0.999348983171361
+turb3d,single,TIE,1.00x vs uniform256 (cheapest uniform as accurate),144.84741548200054,0.013900918695844009,0.9991254734260936

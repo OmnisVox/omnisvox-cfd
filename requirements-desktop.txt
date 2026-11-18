@@ -1,0 +1,6 @@
+numpy>=1.24
+scipy>=1.10
+PySide6-Essentials>=6.5
+pyqtgraph>=0.13
+# GPU (optional) - pick the wheel matching your CUDA version:
+# cupy-cuda12x>=13
