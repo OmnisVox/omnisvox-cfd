@@ -38,6 +38,13 @@ Also measured: 3-D single precision runs **1.9× faster** than double at 256³ w
 
 The numerics, the controller and what is and isn't validated: [`docs/METHOD.md`](docs/METHOD.md).
 
+## Roadmap
+
+- **Cut the GPU per-step overhead** (CUDA Graphs or fused kernels). Below about 128³ / 1024², each A100 step costs a fixed ~6 ms (3-D) or ~3.3 ms (2-D), which caps savings on small and medium grids.
+- **Add a burst benchmark** (an impulsive start, for example), where fine resolution is needed only briefly. That's where adaptive resolution should pay off most, and none of the current five cases show it.
+- **A better early-warning trigger for turbulent start-up**, so turbulent flows don't have to start on the finest grid by default.
+- **A CuPy port of the local-refinement patch**, to test spatial refinement at large scale on the GPU.
+
 ## Windows quick start (no command line)
 
 1. Install Python 3.10 or newer from https://www.python.org/downloads/windows/
